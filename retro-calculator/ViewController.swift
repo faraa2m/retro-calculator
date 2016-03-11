@@ -70,6 +70,20 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func clearPressed(sender: AnyObject) {
+        playSound()
+        reset()
+    }
+    
+    func reset(){
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outputLbl.text = "0"
+    }
+    
     func processOperation(op: Operation){
         playSound()
         
